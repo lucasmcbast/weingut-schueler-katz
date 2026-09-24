@@ -11,10 +11,23 @@
 <link rel="icon" type="image/png" sizes="16x16" href="assets/schueler-katz/favicon-16.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/schueler-katz/favicon-192.png">
 <link rel="apple-touch-icon" href="assets/schueler-katz/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&display=swap" rel="stylesheet">
 <style>
+
+  /* ── Fonts (self-hosted, no request to Google) ── */
+  @font-face {
+    font-family: 'Josefin Sans';
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    src: url('assets/fonts/josefin-sans.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('assets/fonts/josefin-sans.woff2') format('woff2');
+  }
 
   /* ── Tokens ── */
   :root {
@@ -233,6 +246,19 @@
     font-size: .85rem;
   }
   .sk-footer .sk-copyright { opacity: .65; font-family: 'Josefin Sans', Arial, sans-serif; font-weight: 300; }
+  .sk-legal-links {
+    display: flex;
+    gap: 18px;
+  }
+  .sk-legal-links a {
+    font-family: 'Josefin Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: .85rem;
+    opacity: .65;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .sk-legal-links a:hover { opacity: 1; border-color: var(--line); }
 
   /* ── Responsive ── */
   @media (max-width: 720px) {
@@ -294,6 +320,10 @@
 
     <footer class="sk-footer">
       <span class="sk-copyright">© <span id="sk-year"></span> Weingut Schüler Katz · Weinmacher im Rheingau seit 1672</span>
+      <span class="sk-legal-links">
+        <a href="impressum-datenschutz.html#impressum">Impressum</a>
+        <a href="impressum-datenschutz.html#datenschutz">Datenschutz</a>
+      </span>
     </footer>
   </div>
 
